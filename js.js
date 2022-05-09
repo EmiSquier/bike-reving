@@ -1,5 +1,5 @@
-usuario = prompt("Ingrese su usuario");
-password = prompt("Ingrese su contraseña");
+usuario = prompt("Ingrese su usuario (Usuario)");
+password = prompt("Ingrese su contraseña (Contraseña)");
 
 while (usuario != "Usuario"){
   alert("Ingrese de nuevo su Usuario")
