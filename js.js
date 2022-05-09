@@ -1,27 +1,44 @@
-function Bienvenida(){
-  alert("Iniciando el programa...")
+usuario = prompt("Ingrese su usuario");
+password = prompt("Ingrese su contraseña");
+
+while (usuario != "Usuario"){
+  alert("Ingrese de nuevo su Usuario")
+  usuario = prompt("Ingrese su usuario");
 }
-Bienvenida();
 
-function pronombre(sexo){
+while (password != "Contraseña"){
+    alert("Ingrese de nuevo su contraseña")
+    password = prompt("Ingrese su contraseña");
+}
 
-  let nombre = prompt("ingrese su nombre")
-  if(sexo == "masculino"){
-    alert("Bienvenido a la plataforma, "+ nombre);
-  }else if(sexo == "femenino"){
-    alert("Bienvenida a la plataforma, "+ nombre);
-  }else{
-    alert("Bienvenide a la plataforma, "+ nombre);
+
+let vehiculo = prompt("Ingrese su tipo de vehiculo");
+
+if (vehiculo === "moto"){
+
+class moto{ 
+  constructor(marca, modelo, potencia, cilindrada){
+      this.marca = marca;
+      this.modelo = modelo;
+      this.potencia = potencia;
+      this.cilindrada = cilindrada;
+  }
+  mostrar(){
+      alert("Su moto es una "+this.marca +" "+ this.modelo + " con una potencia de "+ this.potencia+ " hp y una cilindrada de "+this.cilindrada + " cc")
   }
 }
 
-pronombre(prompt("Ingrese su sexo (masculino, femenino, otro)"));
+let marca = prompt("ingrese la marca de su vehiculo");
+let modelo = prompt("ingrese su modelo");
+let potencia = prompt("ingrese su potencia");
+let cilindrada = prompt("ingrese su cilindrada");
 
-let resultado = function(numero){
-
-  console.log(numero - 1);
-  console.log(numero + 1);
-
+const moto1 = new moto(marca, modelo, potencia, cilindrada);
+console.log(moto1.marca);
+moto1.mostrar()}
+else{
+  alert("Su vehículo aún no está registrado, pásese a las dos ruedas ;)");
 }
 
-resultado(parseInt(prompt("Ingrese un numeroide")));
+
+
