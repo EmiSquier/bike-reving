@@ -1,4 +1,4 @@
-usuario = prompt("Ingrese su usuario (Usuario)");
+/*usuario = prompt("Ingrese su usuario (Usuario)");
 password = prompt("Ingrese su contraseña (Contraseña)");
 
 while (usuario != "Usuario"){
@@ -38,7 +38,27 @@ console.log(moto1.marca);
 moto1.mostrar()}
 else{
   alert("Su vehículo aún no está registrado, pásese a las dos ruedas ;)");
-}
+}*/
 
 
+//Login comentado para comodidad del tutor
 
+//Base de datos de motocicletas
+
+let marca = ['Chevrolet', 'Kawasaki', 'Yamaha', 'Suzuki'];
+  console.log(marca[0]);
+
+//Chevrolet no hace motos por lo que debe ser eliminado del array.
+
+marca.shift()
+  console.log(marca)
+
+//tenemos una ktm al inicio, así que debemos agregarla
+
+marca.unshift('Ktm');
+  console.log(marca)
+
+//necesitamos encontrar la posición de YAMAHA.
+
+let pos = marca.indexOf('Yamaha');
+  console.log(pos);
