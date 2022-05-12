@@ -46,12 +46,12 @@ else{
 //Base de datos de motocicletas
 
 let marca = ['Chevrolet', 'Kawasaki', 'Yamaha', 'Suzuki'];
-  console.log(marca[0]);
+  console.log(marca);
 
 //Chevrolet no hace motos por lo que debe ser eliminado del array.
 
-marca.shift()
-  console.log(marca)
+let marcaEliminada = marca.shift()
+  console.log(marca);
 
 //tenemos una ktm al inicio, así que debemos agregarla
 
