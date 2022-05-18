@@ -1,4 +1,4 @@
-/*usuario = prompt("Ingrese su usuario (Usuario)");
+usuario = prompt("Ingrese su usuario (Usuario)");
 password = prompt("Ingrese su contraseña (Contraseña)");
 
 while (usuario != "Usuario"){
@@ -38,10 +38,7 @@ console.log(moto1.marca);
 moto1.mostrar()}
 else{
   alert("Su vehículo aún no está registrado, pásese a las dos ruedas ;)");
-}*/
-
-
-//Login comentado para comodidad del tutor
+}
 
 //Base de datos de motocicletas
 
