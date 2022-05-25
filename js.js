@@ -1,5 +1,5 @@
 let informacion = document.createElement("p");
-informacion.innerHTML = "<h3>This app will alow you to log your brand and model bike for information, tecnical specs, and users opinions<h3>";
+informacion.innerHTML = "<h3>This app will allow you to log your brand and model bike for information, tecnical specs, and users opinions<h3>";
 document.body.append(informacion);
 
 let subtitulo = document.getElementById("subtitulo");
