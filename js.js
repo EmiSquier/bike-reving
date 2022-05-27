@@ -10,6 +10,7 @@ nombre1.onchange= () => {
 let informacion = document.createElement("p");
 informacion.innerHTML = "<h3>This app will allow you to log your brand and model bike for information, tecnical specs, and users opinions<h3>";
 document.body.append(informacion);
+informacion.setAttribute("id", "subtitulo")
 
 let subtitulo = document.getElementById("subtitulo");
 subtitulo.remove();

@@ -7,4 +7,29 @@ body{
 
 main{
     margin: 25px;
+    background-color: bisque;
+    padding: 1em;
+}
+
+#subtitulo{
+    padding: 1em;
+    background-color: bisque;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#saludo{
+    padding-left: 1em;
+    background-color: blanchedalmond;
+    font-size: 2em;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#crearMoto{
+    padding-left: 1em;
+    background-color: blanchedalmond;
+    font-size: 2em;
+    margin-left: 25px;
+    margin-right: 25px;
 }
