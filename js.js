@@ -1,10 +1,12 @@
-let nombre = document.getElementById("nombre");
-nombre.onchange= () => {
-  let saludo = document.createElement("h3");
-  saludo.innerHTML = nombre + " welcome to this, your motorbike site.";
-  document.body.append(saludo);
-  saludo.setAttribute("id", "saludo")
+let nombre1 = document.getElementById("nombre");
+nombre1.onchange= () => {
+  let saludo1 = document.createElement("h3");
+  saludo1.innerHTML = nombre1.value + " welcome to this, your motorbike site.";
+  document.body.append(saludo1);
+  saludo1.setAttribute("id", "saludo")
 }
+
+
 let informacion = document.createElement("p");
 informacion.innerHTML = "<h3>This app will allow you to log your brand and model bike for information, tecnical specs, and users opinions<h3>";
 document.body.append(informacion);
