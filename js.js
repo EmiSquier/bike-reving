@@ -1,3 +1,10 @@
+let nombre = document.getElementById("nombre");
+nombre.onchange= () => {
+  let saludo = document.createElement("h3");
+  saludo.innerHTML = nombre + " welcome to this, your motorbike site.";
+  document.body.append(saludo);
+  saludo.setAttribute("id", "saludo")
+}
 let informacion = document.createElement("p");
 informacion.innerHTML = "<h3>This app will allow you to log your brand and model bike for information, tecnical specs, and users opinions<h3>";
 document.body.append(informacion);
@@ -24,3 +31,10 @@ function borrarMoto(){
   let borrarMoto = document.getElementById("crearMoto");
   borrarMoto.remove()
 }
+
+let botonCrear = document.getElementById("button");
+  botonCrear.addEventListener("click", mostrarMoto);
+
+let botonBorrar = document.getElementById("buttonDelete");
+  botonBorrar.onclick = () => {borrarMoto()};
+
