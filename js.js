@@ -15,9 +15,6 @@ informacion.setAttribute("id", "subtitulo")
 let subtitulo = document.getElementById("subtitulo");
 subtitulo.remove();
 
-/*let motoMarca = document.getElementById("marca").value;
-let motoModelo = document.getElementById("modelo").value;
-let motoCilindrada = document.getElementById("cilindrada").value;*/
 
 function mostrarMoto (){
   let motoMarca = document.getElementById("marca").value;
@@ -40,4 +37,34 @@ let botonCrear = document.getElementById("button");
 
 let botonBorrar = document.getElementById("buttonDelete");
   botonBorrar.onclick = () => {borrarMoto()};
+
+/*base de datos local marcas*/
+
+localStorage.setItem('1', 'Benelli');
+localStorage.setItem('2', 'CfMoto');
+localStorage.setItem('3', 'Harley Davidson');
+localStorage.setItem('4', 'Kawasaki');
+localStorage.setItem('5', 'KTM');
+localStorage.setItem('6', 'Suzuki');
+
+/*rangos de cilindradas comunes*/
+
+localStorage.setItem('chica', 'menos de 250cc');
+localStorage.setItem('mediana', 'entre 250cc y 600cc');
+localStorage.setItem('alta', 'entre 600cc y 1800 cc');
+
+/*obteniendo una marca y cilindrada en particular*/
+
+let marcaStorage = localStorage.getItem('4');
+let cilindradaStorage = localStorage.getItem('alta');
+
+let botonStorage = document.getElementById("buttonStorage");
+  botonCrear.addEventListener("click", mostrarStorage());
+  
+function mostrarStorage(){
+  let mostrarStorage = document.createElement("h3");
+  mostrarStorage.innerHTML = marcaStorage +" "+cilindradaStorage;
+  document.body.append(mostrarStorage);
+  mostrarStorage.setAttribute("id", "storage");
+}
 

@@ -33,3 +33,11 @@ main{
     margin-left: 25px;
     margin-right: 25px;
 }
+
+#storage{
+    padding-left: 1em;
+    background-color: blanchedalmond;
+    font-size: 2em;
+    margin-left: 25px;
+    margin-right: 25px;
+}
