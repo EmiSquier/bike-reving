@@ -1,11 +1,12 @@
-let nombre1 = document.getElementById("nombre");
-nombre1.onchange= () => {
-  let saludo1 = document.createElement("h3");
-  saludo1.innerHTML = nombre1.value + " welcome to this, your motorbike site.";
-  document.body.append(saludo1);
-  saludo1.setAttribute("id", "saludo")
+function bienvenida(){
+let nombre = document.getElementById("nombre").value;
+let edad = document.getElementById("edad").value;
+
+edad >= 18 ? alert("Bienvenido " + nombre) : alert("Me gusta tu entusiasmo, "+ nombre)
 }
 
+let botonEnviar = document.getElementById("buttonEnviar");
+  botonEnviar.addEventListener("click", bienvenida)
 
 let informacion = document.createElement("p");
 informacion.innerHTML = "<h3>This app will allow you to log your brand and model bike for information, tecnical specs, and users opinions<h3>";
@@ -38,33 +39,20 @@ let botonCrear = document.getElementById("button");
 let botonBorrar = document.getElementById("buttonDelete");
   botonBorrar.onclick = () => {borrarMoto()};
 
-/*base de datos local marcas*/
+/*base de datos*/
 
-localStorage.setItem('1', 'Benelli');
-localStorage.setItem('2', 'CfMoto');
-localStorage.setItem('3', 'Harley Davidson');
-localStorage.setItem('4', 'Kawasaki');
-localStorage.setItem('5', 'KTM');
-localStorage.setItem('6', 'Suzuki');
+const BD = [
+  {id: 1, marca: 'Kawasaki', modelo: 'er6-f', cilindrada: 650},
+  {id: 2, marca: 'Kawasaki', modelo: 'er6-n', cilindrada: 650},
+  {id: 3, marca: 'Kawasaki', modelo: 'Vulcan', cilindrada: 1600},
+  {id: 4, marca: 'Honda', modelo: 'CBR', cilindrada: 250},
+  {id: 5, marca: 'Honda', modelo: 'CB 500 x', cilindrada: 500},
+  {id: 6, marca: 'KTM', modelo: 'rc 390', cilindrada: 390},
+  {id: 7, marca: 'KTM', modelo: 'Duke 390', cilindrada: 390},
+]
 
-/*rangos de cilindradas comunes*/
 
-localStorage.setItem('chica', 'menos de 250cc');
-localStorage.setItem('mediana', 'entre 250cc y 600cc');
-localStorage.setItem('alta', 'entre 600cc y 1800 cc');
 
-/*obteniendo una marca y cilindrada en particular*/
+const [a, b] = BD;
 
-let marcaStorage = localStorage.getItem('4');
-let cilindradaStorage = localStorage.getItem('alta');
-
-let botonStorage = document.getElementById("buttonStorage");
-  botonCrear.addEventListener("click", mostrarStorage());
-  
-function mostrarStorage(){
-  let mostrarStorage = document.createElement("h3");
-  mostrarStorage.innerHTML = marcaStorage +" "+cilindradaStorage;
-  document.body.append(mostrarStorage);
-  mostrarStorage.setAttribute("id", "storage");
-}
-
+console.log(a);
