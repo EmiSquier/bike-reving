@@ -53,6 +53,10 @@ const BD = [
 
 
 
-const [a, b] = BD;
+const [a, b, c, d, e, f, g, h] = BD;
 
-console.log(a);
+console.log(g);
+
+console.log(d);
+
+console.log(b)
