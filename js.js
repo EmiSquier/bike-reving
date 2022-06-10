@@ -2,7 +2,7 @@ function bienvenida(){
 let nombre = document.getElementById("nombre").value;
 let edad = document.getElementById("edad").value;
 
-edad >= 18 ? alert("Bienvenido " + nombre) : alert("Me gusta tu entusiasmo, "+ nombre)
+edad >= 18 ? swal(nombre, "Bienvenido!") : swal(nombre, "Me gusta tu entusiasmo!!!")
 }
 
 let botonEnviar = document.getElementById("buttonEnviar");
