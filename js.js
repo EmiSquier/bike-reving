@@ -55,8 +55,14 @@ const BD = [
 
 const [a, b, c, d, e, f, g, h] = BD;
 
+function mostrarBD(){
+  
 console.log(g);
 
-console.log(d);
+console.log(a);
 
 console.log(b)
+}
+
+let botonBd = document.getElementById("buttonBd");
+botonBd.onclick = () => {mostrarBD()}
