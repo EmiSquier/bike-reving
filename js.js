@@ -66,3 +66,16 @@ console.log(b)
 
 let botonBd = document.getElementById("buttonBd");
 botonBd.onclick = () => {mostrarBD()}
+
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '18b0f3c3ddmsh476e3145da49a75p17a59fjsn4e6650baf93d',
+		'X-RapidAPI-Host': 'motorcycle-specs-database.p.rapidapi.com'
+	}
+};
+
+fetch('https://motorcycle-specs-database.p.rapidapi.com/article/2012/Kawasaki/Ninja%20650', options)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
