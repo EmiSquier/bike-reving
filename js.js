@@ -39,33 +39,7 @@ let botonCrear = document.getElementById("button");
 let botonBorrar = document.getElementById("buttonDelete");
   botonBorrar.onclick = () => {borrarMoto()};
 
-/*base de datos*/
-
-const BD = [
-  {id: 1, marca: 'Kawasaki', modelo: 'er6-f', cilindrada: 650},
-  {id: 2, marca: 'Kawasaki', modelo: 'er6-n', cilindrada: 650},
-  {id: 3, marca: 'Kawasaki', modelo: 'Vulcan', cilindrada: 1600},
-  {id: 4, marca: 'Honda', modelo: 'CBR', cilindrada: 250},
-  {id: 5, marca: 'Honda', modelo: 'CB 500 x', cilindrada: 500},
-  {id: 6, marca: 'KTM', modelo: 'rc 390', cilindrada: 390},
-  {id: 7, marca: 'KTM', modelo: 'Duke 390', cilindrada: 390},
-]
-
-
-
-const [a, b, c, d, e, f, g, h] = BD;
-
-function mostrarBD(){
-  
-console.log(g);
-
-console.log(a);
-
-console.log(b)
-}
-
-let botonBd = document.getElementById("buttonBd");
-botonBd.onclick = () => {mostrarBD()}
+/*consumo de api*/
 
 const options = {
 	method: 'GET',
