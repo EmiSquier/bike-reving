@@ -1,12 +1,12 @@
 const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '18b0f3c3ddmsh476e3145da49a75p17a59fjsn4e6650baf93d',
-      'X-RapidAPI-Host': 'motorcycle-specs-database.p.rapidapi.com'
+		"X-RapidAPI-Key": "72909027admsh408f2fa2b4c700fp162140jsn722905fa6e31",
+		"X-RapidAPI-Host": "motorcycle-specs-database.p.rapidapi.com"
     }
   };
 
-const urlSpec = 'https://motorcycle-specs-database.p.rapidapi.com/article/' + document.getElementById('year').value + '/' + document.getElementById('marca').value + '/' + document.getElementById('modelo').value
+const urlSpec = 'https://motorcycle-specs-database.p.rapidapi.com/article/' + document.getElementById('yearIn').value + '/' + document.getElementById('marca').value + '/' + document.getElementById('modelo').value
 
 async function getData(){
     const response = await fetch(urlSpec, options);
@@ -18,7 +18,7 @@ async function getData(){
     const year = data.articleCompleteInfo.yearName;
 
     const displacement = data.engineAndTransmission.displacementName;
-    const engineDetail = data.engineAndTransmission.engineDetailName;
+    const engineDetails = data.engineAndTransmission.engineDetailsName;
     const compression = data.engineAndTransmission.compressionName;
     const boreXStroke = data.engineAndTransmission.boreXStrokeName;
     const fuelSystem = data.engineAndTransmission.fuelSystemName;
@@ -48,7 +48,7 @@ async function getData(){
     const weightInclOilGasEtcN = data.physicalMeasuresAndCapacities.weightInclOilGasEtcName;
 
     const colorOptions = data.otherSpecifications.colorOptionsName;
-    const factoryWarrantyName = data.otherSpecifications.factoryWarrantyNameName;
+    const factoryWarrantyName = data.otherSpecifications.factoryWarrantyName;
     const starter = data.otherSpecifications.starterName;
 
     document.getElementById('make').textContent = make;
@@ -57,7 +57,7 @@ async function getData(){
     document.getElementById('year').textContent = year;
 
     document.getElementById('displacement').textContent = displacement;
-    document.getElementById('engineDetail').textContent = engineDetail;
+    document.getElementById('engineDetails').textContent = engineDetails;
     document.getElementById('compression').textContent = compression;
     document.getElementById('boreXStroke').textContent = boreXStroke;
     document.getElementById('fuelSystem').textContent = fuelSystem;
